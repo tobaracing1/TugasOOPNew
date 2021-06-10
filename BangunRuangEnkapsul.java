@@ -21,52 +21,24 @@ public class BangunRuangEnkapsul {
             System.out.println("");
 
             if (Pilihan == 1){
-                int pa;
-                int le;
-                int ti;
-                System.out.println("Ini adalah Program untuk mencari Luas dan Volume dari bangun Balok");
-                System.out.print("Masukkan Panjang dari Balok : ");
-                pa= UserInput.nextInt();
-                
-                System.out.print("Masukkan Lebar dari Balok   : ");
-                le= UserInput.nextInt();
-
-                System.out.print("Masukkan Tinggi dari Balok  : ");
-                ti = UserInput.nextInt();
-                BangunBalok balok = new BangunBalok(pa, le, ti);
-
+                BangunBalok balok = new BangunBalok();
+                System.out.println(balok.toString());
                 System.out.println("Luas  dari Balok adalah  : " + balok.LuasBaloka());
                 System.out.println("Volume dari Balok adalah : " + balok.VolumeBaloka());
                 System.out.println();
             }
 
             else if(Pilihan == 2){
-                int sisi;
-                System.out.println("Ini adalah Program untuk mencari Luas dan Volume dari bangun Kubus");
-                System.out.print("Masukkan Sisi dari Kubus : ");
-                sisi = UserInput.nextInt();
-                System.out.println("");
-                
-                BangunKubus kubus = new BangunKubus(sisi);
-
+                BangunKubus kubus = new BangunKubus();
+                System.out.println(kubus.toString());
                 System.out.println("Luas  dari Kubus adalah  : " + kubus.LuasKubusa());
                 System.out.println("Volume dari Kubus adalah : " + kubus.VolumeKubusa());
                 System.out.println();
             }
 
             else if( Pilihan == 3){
-                int RuasTabung;
-                int TinggiTabung;
-                
-                System.out.println("Ini adalah Program untuk mencari Luas dan Volume dari bangun Tabung");
-                System.out.print("Masukkan Ruas dari Tabung : ");
-                RuasTabung = UserInput.nextInt();
-
-                System.out.print("Masukkan Tinggi dari Tabung : ");
-                TinggiTabung = UserInput.nextInt();
-                System.out.println("");
-
-                BangunTabung tabung = new BangunTabung(RuasTabung, TinggiTabung);
+                BangunTabung tabung = new BangunTabung();
+                System.out.println(tabung.toString());
                 System.out.println("Luas  dari Tabung adalah  : " + tabung.LuasTabunga());
                 System.out.println("Volume dari Tabung adalah : " + tabung.VolumeTabunga());
                 System.out.println(); 

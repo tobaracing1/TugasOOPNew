@@ -1,10 +1,22 @@
 package src;
-
+import java.util.Scanner;
 public class Kubus {
     public static class BangunKubus{
         int S;
-        BangunKubus(int s){
-            this.S = s ;
+        Scanner UserInput = new Scanner(System.in);
+
+        BangunKubus(){
+            System.out.println("Ini adalah Program untuk mencari Luas dan Volume dari bangun Kubus");
+            System.out.print("Masukkan Sisi dari Kubus : ");
+            S = UserInput.nextInt();
+            System.out.println("");
+        }
+
+        public void setS(int S){
+            this.S = S;
+        }
+        public int getS(){
+            return S;
         }
     
         int LuasKubusa(){
@@ -14,9 +26,14 @@ public class Kubus {
         }
     
         int VolumeKubusa(){
-            System.out.println("");
             int VolumeKubus = S*S*S;
             return VolumeKubus;
         }
+
+        @Override
+        public String toString() {
+            return "\nSisi : " + S ;
+    }
+
     }
 }
